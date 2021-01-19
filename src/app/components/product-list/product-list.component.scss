@@ -1,0 +1,57 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 175px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  
+  
+  
+  .container {
+    .btn-div {
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+
+    .card button {
+      border: none;
+      border-radius: 2px;
+      outline: 0;
+      padding: 6px;
+      color: white;
+      background-color: #1078cc;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      // font-size: 18px;
+      font-size: medium;
+      &::before {
+          position: absolute;
+          content: '';
+          right: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 0;
+          height: 0;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid #fff;
+      }
+    }
+
+    .card {
+      cursor: pointer;
+      img {
+        width:100%;
+        padding: 0.5em;
+      }
+    }
+  }

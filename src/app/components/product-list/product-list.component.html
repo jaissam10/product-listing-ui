@@ -1,0 +1,45 @@
+<div>
+    <app-header></app-header>
+    <div class="view-component">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)" (click)="onLocationClick()" *ngIf="currLocation?.name">{{currLocation?.name}}</a></li>
+                            <li class="breadcrumb-item"><a href="javascript:void(0)" (click)="onBranchClick()" *ngIf="currBranch?.name"> {{currBranch?.name}}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page" *ngIf="paramCategory!='default'">{{paramCategory || 'Category'}}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <ng-container *ngIf="paramCategory == 'default'">
+                            <div class="col-12 col-md-6 col-lg-3" style="margin-bottom: 3rem;" *ngFor="let category of categoriesArr">
+                                <div class="card" (click)="goToSubCategory(category)">
+                                    <img src="assets/images/category/{{category.image}}" alt="Denim Jeans" />
+                                    <p></p>
+                                    <p class="btn-div"><button class="btn">{{category.name}}</button></p>
+                                </div>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="paramCategory != 'default'">
+                            <div class="col-12 col-md-6 col-lg-3" style="margin-bottom: 3rem;" *ngFor="let subcategory of subcategoriesArr">
+                                <div class="card" >
+                                    <img src="assets/images/subcategory/{{subcategory.image}}" alt="Denim Jeans" />
+                                    <p></p>
+                                    <p class="btn-div"><button class="btn">{{subcategory.name}}</button></p>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

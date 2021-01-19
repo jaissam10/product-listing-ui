@@ -1,0 +1,17 @@
+.home-div {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://www.amadeus-hospitality.com/wp-content/uploads/2018/10/shutterstock_256794790.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .vertical-center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 700;
+    font-size: x-large;
+  } 
+}

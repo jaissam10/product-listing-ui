@@ -1,0 +1,38 @@
+<header>
+    <div class="menu">
+        <ul>
+            <li [routerLink]="['/home']"> 
+                Rental Management System
+            </li>
+            <li class="dropdown">
+                Select Location
+                <ul> 
+                    <li class="dropdown" *ngFor="let location of locationsArr; let i = index;" (click)="onLocationClick(location)">
+                        {{location?.name}}
+                        <ul>
+                            <li class="link" *ngFor="let branch of location.branches" (click)="onBranchClick($event, location, branch)">
+                                <a>{{branch.name}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                   <!--  <li class="link">
+                        <a href="">Im a link</a>
+                    </li>
+                    <li class="dropdown">
+                        Nested dropdown
+                        <ul>
+                            <li class="link">
+                                <a href="">Im a link</a>
+                            </li>
+                            <li class="link">
+                                <a href="">Im a link</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                </ul>
+            </li>
+        </ul>
+        
+    </div>
+    
+</header>
